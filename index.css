@@ -2,12 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #fff
+  color: #fff;
+}
+html {
+  height: 100%;
+  width: 100%;
 }
 
 body {
   overflow: hidden;
   background-color: black;
+  position: relative;
 }
 
 canvas {
@@ -25,6 +30,16 @@ canvas {
   flex-direction: column;
   row-gap: 10px;
   overflow: auto;
+}
+
+@media (max-width: 800px) {
+  #control_buttons {
+    top: 100%;
+    right: auto;
+    height: 50%;
+    flex-direction: row;
+    overflow: auto;
+  }
 }
 
 #add_container {
@@ -61,7 +76,9 @@ button:active {
   transform: scale(95%);
 }
 
-.select, option, input {
+.select,
+option,
+input {
   color: #000;
 }
 
@@ -79,7 +96,7 @@ button:active {
 }
 
 .group > label {
-  filter: invert(100)
+  filter: invert(100);
 }
 
 #bond_select {
